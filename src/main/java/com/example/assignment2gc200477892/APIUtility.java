@@ -18,7 +18,7 @@ import java.nio.file.Paths;
 public class APIUtility {
 
     /**
-     * Google has made a nice set of libs to parse Json object. This method will read file and parse out JSON objects into Java objects.
+     * Practice1: Google has made a nice set of libs to parse Json object. This method will read file and parse out JSON objects into Java objects.
      */
     public static ApiResponse getObjectsFromJSONFile(String fileName)
     {
@@ -44,7 +44,7 @@ public class APIUtility {
     }
 
     /**
-     * This method will call the API and write to a file.
+     *  Practice2: This method will call the API and write to a file.
      */
     public static ApiResponse getObjectsFromWeb() {
         //don't plan to search anything...
@@ -60,4 +60,30 @@ public class APIUtility {
         }
         return getObjectsFromJSONFile("javaApiFetched.json");
     }
+
+    /**
+     * Final: This method call the API and return the Java Objects without creating any JSON file on hdd.
+     */
+    public static ApiResponse getObjectsFromWebQuick() {
+        //don't plan to search anything...
+        String uri= "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
+
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(uri)).build();
+        try {
+            //Call API and write the result and returns a string
+            HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+            Gson gson = new Gson();
+//            response asked for body
+            return gson.fromJson(response.body(), ApiResponse.class);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //if we didn't get json object return, return null.
+        return null;
+    }
+
+
+
 }
