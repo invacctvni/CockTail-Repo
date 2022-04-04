@@ -24,8 +24,12 @@ public class DrinkViewController implements Initializable {
     @FXML
     private void searchResults()
     {
-        ApiResponse apiResponse = APIUtility.getObjectsFromWebQuick();
-        resultListView.getItems().addAll(apiResponse.getDrinks());
+        System.out.println(resultListView.getItems().size());
+        //prevent multiple loading repeated rows of data.
+        if (resultListView.getItems().size() == 0) {
+            ApiResponse apiResponse = APIUtility.getObjectsFromWebQuick();
+            resultListView.getItems().addAll(apiResponse.getDrinks());
+        }
     }
 
     @Override

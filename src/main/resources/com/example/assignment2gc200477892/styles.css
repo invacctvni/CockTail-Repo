@@ -1,4 +1,22 @@
 .root {
-    -fx-background-color: linear-gradient(from 300px 300px to 500px 500px, darkred, orangered);
+    -fx-background-color: linear-gradient(from 300px 300px to 500px 500px, darkcyan, lightblue);
     -fx-font-size: 17px;
+    -fx-font-family: "Century Gothic";
+}
+
+.button {
+    -fx-background-radius: 30;
+    -fx-background-color: linear-gradient(greenyellow,#be1d00);
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20px;
+    -fx-font-family: "Century Gothic";
+}
+
+#header {
+    -fx-font-size: 30pt;
 }
