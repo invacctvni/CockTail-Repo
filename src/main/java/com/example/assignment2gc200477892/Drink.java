@@ -93,4 +93,10 @@ public class Drink {
     public String getGetIngredient7() {
         return getIngredient7;
     }
+
+
+    //get the method.
+    public String toString () {
+        return String.format("%s", name);
+    }
 }
