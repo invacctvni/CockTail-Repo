@@ -2,12 +2,14 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="400.0" prefWidth="650.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2gc200477892.DrinkDetailsController">
    <children>
@@ -20,7 +22,7 @@
             </Label>
          </top>
          <left>
-            <GridPane BorderPane.alignment="CENTER">
+            <GridPane prefHeight="336.0" prefWidth="239.0" BorderPane.alignment="CENTER">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -29,9 +31,36 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
+               <children>
+                  <Label />
+                  <Label text="Alcohol" GridPane.rowIndex="1" />
+                  <Label text="Ingredient" GridPane.rowIndex="2" />
+                  <Label text="instructions" GridPane.rowIndex="3" />
+                  <Label text="Category" />
+                  <Label fx:id="categoryLabel" text="Label" GridPane.columnIndex="1" />
+                  <Label fx:id="alcoholLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="IngredientLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="instructionLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
             </GridPane>
          </left>
+         <right>
+            <VBox prefHeight="339.0" prefWidth="272.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="ingredient" />
+                  <ListView fx:id="ingredientListView" prefHeight="200.0" prefWidth="219.0" />
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <ImageView fx:id="imageView" fitHeight="280.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>
