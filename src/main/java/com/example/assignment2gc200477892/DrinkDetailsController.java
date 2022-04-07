@@ -23,7 +23,7 @@ public class DrinkDetailsController {
     private ImageView imageView;
 
     @FXML
-    private ListView<?> ingredientListView;
+    private ListView<String> ingredientListView;
 
     @FXML
     private Label instructionLabel;

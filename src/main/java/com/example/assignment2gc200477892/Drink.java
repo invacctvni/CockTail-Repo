@@ -3,6 +3,8 @@ package com.example.assignment2gc200477892;
 import com.google.gson.annotations.SerializedName;
 
 public class Drink {
+    @SerializedName("idDrink")
+    private String idDrink;
     @SerializedName("strDrink")
     private String name;
 
@@ -41,6 +43,14 @@ public class Drink {
 
     @SerializedName("strIngredient7")
     private String getIngredient7;
+
+    public String getIdDrink() {
+        return idDrink;
+    }
+
+    public void setIdDrink(String idDrink) {
+        this.idDrink = idDrink;
+    }
 
     public String getName() {
         return name;
