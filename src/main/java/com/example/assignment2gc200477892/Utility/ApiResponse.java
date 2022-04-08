@@ -1,5 +1,6 @@
-package com.example.assignment2gc200477892;
+package com.example.assignment2gc200477892.Utility;
 
+import com.example.assignment2gc200477892.Model.Drink;
 import com.google.gson.annotations.SerializedName;
 
 public class ApiResponse {

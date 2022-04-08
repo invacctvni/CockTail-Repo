@@ -21,8 +21,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch();
-//        ApiResponse apiResponse = APIUtility.getObjectsFromWebQuick();
-//        System.out.println(apiResponse);
     }
 }
 

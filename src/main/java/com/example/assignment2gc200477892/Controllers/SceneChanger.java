@@ -1,7 +1,7 @@
-package com.example.assignment2gc200477892;
+package com.example.assignment2gc200477892.Controllers;
 
+import com.example.assignment2gc200477892.Main;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;

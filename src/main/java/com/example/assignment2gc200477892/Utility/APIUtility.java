@@ -1,12 +1,11 @@
 //at minimum, you should have the model class(es) completed, an API utility to send HTTP requests and create objects from the JSON returned
-package com.example.assignment2gc200477892;
+package com.example.assignment2gc200477892.Utility;
 
+//import com.example.assignment2gc200477892.Model.DrinkDetails;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -85,10 +84,9 @@ public class APIUtility {
     }
 
 
-    public static DrinkDetails getDrinkDetails(String drinkId)
-    {
-
-        //don't plan to search anything...
+//    public static DrinkDetails getDrinkDetails(String drinkId)
+//    {
+//
 //        String uri= "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="+drinkId;
 //        System.out.println(uri);
 //        HttpClient client = HttpClient.newHttpClient();
@@ -102,7 +100,7 @@ public class APIUtility {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-        //if we didn't get json object return, return null.
-        return null;
-    }
+//        if we didn't get json object return, return null.
+//        return null;
+//    }
 }
