@@ -44,8 +44,8 @@ public class DrinkViewController implements Initializable {
     @FXML
     private void searchResults()
     {
-        resultListView.setStyle("-fx-background-image: none");
-        homePageLabel.setText("Pick One Below to See the Image.");
+        resultListView.setStyle("-fx-background-image: none;");
+        homePageLabel.setText("Pick One Below to View the Image.");
         homePageLabel.setStyle("-fx-text-fill: linear-gradient(greenyellow,deepskyblue)");
 
         //prevent multiple loading repeated rows of data.
@@ -65,7 +65,7 @@ public class DrinkViewController implements Initializable {
         //make info button invisible first.
         getInfoButton.setVisible(false);
         homePageLabel.setStyle("-fx-text-fill: linear-gradient(coral,lightskyblue)");
-        homePageLabel.setText("Welcome. Click Start to view different kinds of cocktails");
+        homePageLabel.setText("Welcome. Click Start to View Different Kinds of Cocktails");
         homePageLabel.setAlignment(Pos.CENTER);
         imageView.setEffect(new DropShadow(20,Color.ORANGE));
         //add listener to add photos.

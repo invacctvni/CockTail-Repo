@@ -39,7 +39,7 @@ public class DrinkDetailsController {
     /**
      * This method will load drink id.
      */
-    public void loadDrinkDetails(String drinkId, String name, String category, String alcohol, List<String> ingredient, String instruction, String photo)
+    public void loadDrinkDetails(String name, String category, String alcohol, List<String> ingredient, String instruction, String photo)
     {
         ingredientLabel.setText(ingredient.get(0));
         alcoholLabel.setText(alcohol);

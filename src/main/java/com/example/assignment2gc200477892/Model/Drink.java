@@ -9,6 +9,7 @@ public class Drink {
     //create the selected instance variables.
     @SerializedName("idDrink")
     private String idDrink;
+
     @SerializedName("strDrink")
     private String name;
 
@@ -20,9 +21,6 @@ public class Drink {
 
     @SerializedName("strInstructions")
     private String instructions;
-
-    @SerializedName("strInstructionsDE")
-    private String instructionsDE;
 
     @SerializedName("strDrinkThumb")
     private String photo;
@@ -37,10 +35,10 @@ public class Drink {
     private String ingredient3;
 
     @SerializedName("strIngredient4")
-    private String getIngredient4;
+    private String ingredient4;
 
     @SerializedName("strIngredient5")
-    private String getIngredient5;
+    private String ingredient5;
 
     public String getIdDrink() {
         return idDrink;
@@ -82,14 +80,13 @@ public class Drink {
         return ingredient3;
     }
 
-    public String getGetIngredient4() {
-        return getIngredient4;
+    public String getIngredient4() {
+        return ingredient4;
     }
 
-    public String getGetIngredient5() {
-        return getIngredient5;
+    public String getIngredient5() {
+        return ingredient5;
     }
-
 
     /**
      *     Use this method to combine all the ingredients
@@ -97,7 +94,7 @@ public class Drink {
 
     public List<String> getIngredientsAll() {
         String[] combined;
-        combined = new String[]{ingredient1, ingredient2, ingredient3, getIngredient4, getIngredient5};
+        combined = new String[]{ingredient1, ingredient2, ingredient3, ingredient4, ingredient5};
         int i = 0;
         List<String> ingredientsFinal = new ArrayList<String>();
         while(i<combined.length) {

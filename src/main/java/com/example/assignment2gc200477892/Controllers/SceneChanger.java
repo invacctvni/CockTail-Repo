@@ -22,13 +22,13 @@ public class SceneChanger {
 //get the controller from the destination
         DrinkDetailsController controller = fxmlLoader.getController();
         //pass in id.
-        controller.loadDrinkDetails(drinkId, name, category, alcohol, ingredient, instruction, photo);
+        controller.loadDrinkDetails(name, category, alcohol, ingredient, instruction, photo);
 
 //        get the stage object from the action event triggered when button was pushed.
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
-        stage.setTitle("Detailed Cocktail Information");
+        stage.setTitle("Detailed Cocktail View");
         stage.getIcons().clear();
         stage.getIcons().add(new Image(photo));
     }
