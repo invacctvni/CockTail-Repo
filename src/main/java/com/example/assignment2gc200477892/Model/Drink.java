@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Drink {
+    //create the selected instance variables.
     @SerializedName("idDrink")
     private String idDrink;
     @SerializedName("strDrink")
@@ -41,12 +42,6 @@ public class Drink {
     @SerializedName("strIngredient5")
     private String getIngredient5;
 
-    @SerializedName("strIngredient6")
-    private String getIngredient6;
-
-    @SerializedName("strIngredient7")
-    private String getIngredient7;
-
     public String getIdDrink() {
         return idDrink;
     }
@@ -69,10 +64,6 @@ public class Drink {
 
     public String getInstructions() {
         return instructions;
-    }
-
-    public String getInstructionsDE() {
-        return instructionsDE;
     }
 
     public String getPhoto() {
@@ -99,15 +90,11 @@ public class Drink {
         return getIngredient5;
     }
 
-    public String getGetIngredient6() {
-        return getIngredient6;
-    }
 
-    public String getGetIngredient7() {
-        return getIngredient7;
-    }
+    /**
+     *     Use this method to combine all the ingredients
+      */
 
-//    combine all the ingredients
     public List<String> getIngredientsAll() {
         String[] combined;
         combined = new String[]{ingredient1, ingredient2, ingredient3, getIngredient4, getIngredient5};
@@ -122,7 +109,10 @@ public class Drink {
         return ingredientsFinal;
     }
 
-    //get the method.
+    /**
+     * Use the toString method to format the result and get the cocktail name.
+     * @return
+     */
     public String toString () {
         return String.format("%s", name);
     }

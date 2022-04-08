@@ -11,21 +11,23 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="650.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2gc200477892.Controllers.DrinkViewController">
    <children>
-      <Button fx:id="searchButton" layoutX="137.0" layoutY="343.0" mnemonicParsing="false" onAction="#searchResults" prefHeight="38.0" prefWidth="73.0" text="Start" />
-      <ListView fx:id="resultListView" layoutX="39.0" layoutY="63.0" prefHeight="260.0" prefWidth="269.0" />
+      <Button fx:id="searchButton" layoutX="198.0" layoutY="333.0" mnemonicParsing="false" onAction="#searchResults" prefHeight="38.0" prefWidth="73.0" text="Start" />
+      <ListView fx:id="resultListView" layoutX="29.0" layoutY="64.0" prefHeight="260.0" prefWidth="269.0" AnchorPane.leftAnchor="100.0" />
       <VBox alignment="TOP_CENTER" layoutX="349.0" layoutY="64.0">
          <children>
-            <ImageView id="homeImage" fx:id="imageView" fitHeight="260.0" fitWidth="269.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: cursor;" />
+            <ImageView id="homeImage" fx:id="imageView" fitHeight="260.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: cursor; -fx-background-radius: 10;">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin></ImageView>
          </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
       </VBox>
-      <Button fx:id="getInfoButton" layoutX="432.0" layoutY="343.0" mnemonicParsing="false" onAction="#getDetails" text="Get Details" />
-      <HBox alignment="CENTER" layoutX="271.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity">
+      <Button fx:id="getInfoButton" layoutX="464.0" layoutY="335.0" mnemonicParsing="false" onAction="#getDetails" text="More" />
+      <HBox alignment="CENTER" layoutX="271.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
          <children>
-            <Label id="header" fx:id="homeHeader" alignment="CENTER" contentDisplay="CENTER" textAlignment="CENTER">
-               <padding>
-                  <Insets left="10.0" right="10.0" />
-               </padding>
-            </Label>
+            <Label id="homeHeader" fx:id="homePageLabel" alignment="CENTER" contentDisplay="CENTER" text="Label" textFill="#d31010" />
          </children>
       </HBox>
    </children>
