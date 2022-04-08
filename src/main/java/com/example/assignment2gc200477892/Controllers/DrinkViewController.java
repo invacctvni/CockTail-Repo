@@ -1,5 +1,8 @@
-package com.example.assignment2gc200477892;
+package com.example.assignment2gc200477892.Controllers;
 
+import com.example.assignment2gc200477892.Model.Drink;
+import com.example.assignment2gc200477892.Utility.APIUtility;
+import com.example.assignment2gc200477892.Utility.ApiResponse;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

@@ -1,5 +1,6 @@
-package com.example.assignment2gc200477892;
+package com.example.assignment2gc200477892.Controllers;
 
+import com.example.assignment2gc200477892.Model.DrinkDetails;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -32,6 +33,7 @@ public class DrinkDetailsController {
 
     @FXML
     private Label instructionLabel;
+
 
     private DrinkDetails drink;
 
