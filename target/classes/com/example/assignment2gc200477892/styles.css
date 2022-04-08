@@ -22,3 +22,9 @@
     -fx-font-size: 30pt;
     -fx-text-fill: green;
 }
+
+#homeImage {
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-width: 5;
+}

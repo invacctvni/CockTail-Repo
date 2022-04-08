@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -30,6 +31,9 @@ public class DrinkViewController implements Initializable {
     @FXML
     private Button getInfoButton;
 
+    @FXML
+    private Label homeHeader;
+
 
     @FXML
     private void searchResults()
@@ -46,6 +50,7 @@ public class DrinkViewController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //make info button invisible first.
         getInfoButton.setVisible(false);
+//        homeHeader.setText("Welcome to Cocktail World");
 
         //add listener to add photos.
         resultListView.getSelectionModel().selectedItemProperty().addListener(
