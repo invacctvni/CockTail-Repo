@@ -6,6 +6,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.util.List;
+
 public class DrinkDetailsController {
 
     @FXML
@@ -34,14 +36,15 @@ public class DrinkDetailsController {
     /**
      * This method will load drink id.
      */
-    public void loadDrinkDetails(String drinkId, String name, String category, String alcohol, String ingredient, String instruction, String photo)
+    public void loadDrinkDetails(String drinkId, String name, String category, String alcohol, List<String> ingredient, String instruction, String photo)
     {
         System.out.println("The drink Id pass into the controller is: " + drinkId + category + alcohol + ingredient + instruction);
-        ingredientLabel.setText(ingredient);
+        ingredientLabel.setText(ingredient.get(0));
         alcoholLabel.setText(alcohol);
         categoryLabel.setText(category);
         drinkTitleLabel.setText(name);
         instructionLabel.setText(instruction);
         imageView.setImage(new Image(photo));
+        ingredientListView.getItems().addAll(ingredient);
     }
 }

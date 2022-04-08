@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class DrinkViewController implements Initializable {
@@ -64,11 +65,9 @@ public class DrinkViewController implements Initializable {
         String name = resultListView.getSelectionModel().getSelectedItem().getName();
         String category = resultListView.getSelectionModel().getSelectedItem().getCategory();
         String alcohol = resultListView.getSelectionModel().getSelectedItem().getAlcohol();
-        String ingredient = resultListView.getSelectionModel().getSelectedItem().getIngredient1();
+        List<String> ingredient = resultListView.getSelectionModel().getSelectedItem().getIngredientsAll();
         String instruction = resultListView.getSelectionModel().getSelectedItem().getInstructions();
         String photo = resultListView.getSelectionModel().getSelectedItem().getPhoto();
-        System.out.println(category);
-//        System.out.println(idDrink);
         SceneChanger.changeScenes(event,"drink-details.fxml",idDrink,name,category,alcohol,ingredient,instruction,photo);
     }
 }

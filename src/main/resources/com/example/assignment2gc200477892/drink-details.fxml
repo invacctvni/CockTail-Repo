@@ -22,10 +22,10 @@
             </Label>
          </top>
          <left>
-            <GridPane prefHeight="339.0" prefWidth="528.0" BorderPane.alignment="CENTER">
+            <GridPane minWidth="500.0" prefHeight="339.0" prefWidth="528.0" BorderPane.alignment="CENTER">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="259.0" minWidth="10.0" prefWidth="125.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="403.0" minWidth="300.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="259.0" minWidth="10.0" prefWidth="148.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="403.0" minWidth="300.0" prefWidth="380.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -36,7 +36,7 @@
                <children>
                   <Label />
                   <Label text="Alcohol" GridPane.rowIndex="1" />
-                  <Label text="Ingredient" GridPane.rowIndex="2" />
+                  <Label text="Key Ingredient" GridPane.rowIndex="2" />
                   <Label text="instructions" GridPane.rowIndex="3" />
                   <Label text="Category" />
                   <Label fx:id="categoryLabel" text="Label" GridPane.columnIndex="1" />
@@ -49,7 +49,7 @@
          <right>
             <VBox prefHeight="339.0" prefWidth="272.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label text="ingredient" />
+                  <Label text="Full ingredient" />
                   <ListView fx:id="ingredientListView" prefHeight="200.0" prefWidth="300.0" />
                </children>
             </VBox>

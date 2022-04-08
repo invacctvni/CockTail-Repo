@@ -2,6 +2,9 @@ package com.example.assignment2gc200477892;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Drink {
     @SerializedName("idDrink")
     private String idDrink;
@@ -102,6 +105,20 @@ public class Drink {
 
     public String getGetIngredient7() {
         return getIngredient7;
+    }
+
+    public List<String> getIngredientsAll() {
+        String[] combined;
+        combined = new String[]{ingredient1, ingredient2, ingredient3, getIngredient4, getIngredient5};
+        int i = 0;
+        List<String> ingredientsFinal = new ArrayList<String>();
+        while(i<combined.length) {
+            if(combined[i]!=null) {
+                ingredientsFinal.add(combined[i]);
+            }
+            i++;
+        }
+        return ingredientsFinal;
     }
 
 
