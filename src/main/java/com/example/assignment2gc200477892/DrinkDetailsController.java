@@ -3,12 +3,13 @@ package com.example.assignment2gc200477892;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class DrinkDetailsController {
 
     @FXML
-    private Label IngredientLabel;
+    private Label ingredientLabel;
 
     @FXML
     private Label alcoholLabel;
@@ -33,10 +34,14 @@ public class DrinkDetailsController {
     /**
      * This method will load drink id.
      */
-    public void loadDrinkDetails(String drinkId)
+    public void loadDrinkDetails(String drinkId, String name, String category, String alcohol, String ingredient, String instruction, String photo)
     {
-        System.out.println("The drink Id pass into the controller is: " + drinkId);
-//        drink = APIUtility.getDrinkDetails(drinkId);
-
+        System.out.println("The drink Id pass into the controller is: " + drinkId + category + alcohol + ingredient + instruction);
+        ingredientLabel.setText(ingredient);
+        alcoholLabel.setText(alcohol);
+        categoryLabel.setText(category);
+        drinkTitleLabel.setText(name);
+        instructionLabel.setText(instruction);
+        imageView.setImage(new Image(photo));
     }
 }

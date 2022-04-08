@@ -3,6 +3,9 @@ package com.example.assignment2gc200477892;
 import com.google.gson.annotations.SerializedName;
 
 public class DrinkDetails {
+    @SerializedName("idDrink")
+    private String idDrink;
+
     @SerializedName("strDrink")
     private String name;
 

@@ -61,7 +61,14 @@ public class DrinkViewController implements Initializable {
     @FXML
     private void getDetails(ActionEvent event) throws IOException {
         String idDrink = resultListView.getSelectionModel().getSelectedItem().getIdDrink();
+        String name = resultListView.getSelectionModel().getSelectedItem().getName();
+        String category = resultListView.getSelectionModel().getSelectedItem().getCategory();
+        String alcohol = resultListView.getSelectionModel().getSelectedItem().getAlcohol();
+        String ingredient = resultListView.getSelectionModel().getSelectedItem().getIngredient1();
+        String instruction = resultListView.getSelectionModel().getSelectedItem().getInstructions();
+        String photo = resultListView.getSelectionModel().getSelectedItem().getPhoto();
+        System.out.println(category);
 //        System.out.println(idDrink);
-        SceneChanger.changeScenes(event,"drink-details.fxml",idDrink);
+        SceneChanger.changeScenes(event,"drink-details.fxml",idDrink,name,category,alcohol,ingredient,instruction,photo);
     }
 }

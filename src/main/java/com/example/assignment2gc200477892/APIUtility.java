@@ -85,5 +85,24 @@ public class APIUtility {
     }
 
 
+    public static DrinkDetails getDrinkDetails(String drinkId)
+    {
 
+        //don't plan to search anything...
+//        String uri= "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="+drinkId;
+//        System.out.println(uri);
+//        HttpClient client = HttpClient.newHttpClient();
+//        HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(uri)).build();
+//        try {
+//            //Call API and write the result and returns a string
+//            HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+//            Gson gson = new Gson();
+////            response asked for body
+//            return gson.fromJson(response.body(), DrinkDetails.class);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+        //if we didn't get json object return, return null.
+        return null;
+    }
 }
