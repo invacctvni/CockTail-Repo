@@ -51,6 +51,7 @@ public class DrinkDetailsController {
         imageView.setEffect(new DropShadow(30, Color.GREENYELLOW));
         imageView.setImage(new Image(photo));
         ingredientListView.getItems().addAll(ingredient);
+        ingredientListView.setStyle("-fx-background-image: none");
     }
 
     /**

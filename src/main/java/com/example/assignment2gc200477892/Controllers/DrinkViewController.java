@@ -44,9 +44,10 @@ public class DrinkViewController implements Initializable {
     @FXML
     private void searchResults()
     {
-        System.out.println(resultListView.getItems().size());
+        resultListView.setStyle("-fx-background-image: none");
         homePageLabel.setText("Pick One Below to See the Image.");
         homePageLabel.setStyle("-fx-text-fill: linear-gradient(greenyellow,deepskyblue)");
+
         //prevent multiple loading repeated rows of data.
         if (resultListView.getItems().size() == 0) {
             ApiResponse apiResponse = APIUtility.getObjectsFromWebQuick();
