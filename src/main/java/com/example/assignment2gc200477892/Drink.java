@@ -107,6 +107,7 @@ public class Drink {
         return getIngredient7;
     }
 
+//    combine all the ingredients
     public List<String> getIngredientsAll() {
         String[] combined;
         combined = new String[]{ingredient1, ingredient2, ingredient3, getIngredient4, getIngredient5};
@@ -120,7 +121,6 @@ public class Drink {
         }
         return ingredientsFinal;
     }
-
 
     //get the method.
     public String toString () {

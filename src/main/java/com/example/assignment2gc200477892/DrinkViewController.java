@@ -27,6 +27,7 @@ public class DrinkViewController implements Initializable {
     @FXML
     private Button getInfoButton;
 
+
     @FXML
     private void searchResults()
     {
@@ -61,6 +62,7 @@ public class DrinkViewController implements Initializable {
      */
     @FXML
     private void getDetails(ActionEvent event) throws IOException {
+        //get selected information
         String idDrink = resultListView.getSelectionModel().getSelectedItem().getIdDrink();
         String name = resultListView.getSelectionModel().getSelectedItem().getName();
         String category = resultListView.getSelectionModel().getSelectedItem().getCategory();
@@ -69,5 +71,6 @@ public class DrinkViewController implements Initializable {
         String instruction = resultListView.getSelectionModel().getSelectedItem().getInstructions();
         String photo = resultListView.getSelectionModel().getSelectedItem().getPhoto();
         SceneChanger.changeScenes(event,"drink-details.fxml",idDrink,name,category,alcohol,ingredient,instruction,photo);
+
     }
 }

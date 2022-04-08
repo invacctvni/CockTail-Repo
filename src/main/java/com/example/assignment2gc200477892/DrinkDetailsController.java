@@ -1,11 +1,13 @@
 package com.example.assignment2gc200477892;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.IOException;
 import java.util.List;
 
 public class DrinkDetailsController {
@@ -38,7 +40,8 @@ public class DrinkDetailsController {
      */
     public void loadDrinkDetails(String drinkId, String name, String category, String alcohol, List<String> ingredient, String instruction, String photo)
     {
-        System.out.println("The drink Id pass into the controller is: " + drinkId + category + alcohol + ingredient + instruction);
+
+//        System.out.println("The drink Id pass into the controller is: " + drinkId + category + alcohol + ingredient + instruction);
         ingredientLabel.setText(ingredient.get(0));
         alcoholLabel.setText(alcohol);
         categoryLabel.setText(category);
@@ -46,5 +49,11 @@ public class DrinkDetailsController {
         instructionLabel.setText(instruction);
         imageView.setImage(new Image(photo));
         ingredientListView.getItems().addAll(ingredient);
+
+    }
+    @FXML
+    public void loadHome(ActionEvent event) throws IOException {
+        SceneChanger.changeScenesHome(event,"drink-view.fxml");
+
     }
 }
