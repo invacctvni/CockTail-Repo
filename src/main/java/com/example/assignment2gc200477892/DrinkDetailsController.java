@@ -28,4 +28,15 @@ public class DrinkDetailsController {
     @FXML
     private Label instructionLabel;
 
+    private DrinkDetails drink;
+
+    /**
+     * This method will load drink id.
+     */
+    public void loadDrinkDetails(String drinkId)
+    {
+        System.out.println("The drink Id pass into the controller is: " + drinkId);
+//        drink = APIUtility.getDrinkDetails(drinkId);
+
+    }
 }
