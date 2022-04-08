@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -34,6 +35,10 @@ public class DrinkDetailsController {
     @FXML
     private Label instructionLabel;
 
+    @FXML
+    private TextArea instructionArea;
+
+
 
     private DrinkDetails drink;
 
@@ -48,10 +53,11 @@ public class DrinkDetailsController {
         alcoholLabel.setText(alcohol);
         categoryLabel.setText(category);
         drinkTitleLabel.setText(name);
-        instructionLabel.setText(instruction);
+        instructionArea.setText(instruction);
+        instructionArea.setEditable(false);
+        instructionArea.setWrapText(true);
         imageView.setImage(new Image(photo));
         ingredientListView.getItems().addAll(ingredient);
-
     }
     @FXML
     public void loadHome(ActionEvent event) throws IOException {

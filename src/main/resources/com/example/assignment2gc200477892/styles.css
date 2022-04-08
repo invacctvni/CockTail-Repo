@@ -2,6 +2,7 @@
     -fx-background-color: linear-gradient(from 300px 300px to 500px 500px, darkcyan, lightblue);
     -fx-font-size: 17px;
     -fx-font-family: "Century Gothic";
+    -fx-background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2022%2F03%2F14%2Fcontratto-spritz-FT-RECIPE0422.jpg");
 }
 
 .button {
@@ -13,10 +14,11 @@
 
 .label {
     -fx-text-fill: #ffffff;
-    -fx-font-size: 12px;
+    -fx-font-size: 15px;
     -fx-font-family: "Century Gothic";
 }
 
 #header {
     -fx-font-size: 30pt;
+    -fx-text-fill: green;
 }

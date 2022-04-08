@@ -17,6 +17,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
         stage.getIcons().add(new Image("https://cdn-icons-png.flaticon.com/512/4097/4097657.png"));
+
     }
 
     public static void main(String[] args) {
